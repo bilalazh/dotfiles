@@ -1,0 +1,193 @@
+# $HOME/.config/alacritty/alacritty.toml
+
+# ... (keep your [window] section as it is) ...
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "None"
+decorations_theme_variant = "Light" # "Dark"
+startup_mode = "Fullscreen"
+
+# Blur Effects (Only on kde wayland) -> investigate this more and add if needed
+opacity = 0.7
+blur = true
+
+
+# --- Start of Corrected Font Section ---
+[font]
+# Set the default font size
+size = 9.5
+
+# Define the normal font face
+[font.normal]
+# You only need to specify the family here if it's different from bold/italic
+# If they are all the same "Jetbrains Mono", you could potentially omit
+# this and the other specific family lines, but being explicit is fine.
+#family = "Jetbrains Mono NL"
+family = "Fira Code"
+ style = "Medium"
+
+
+# Define the bold font face
+[font.bold]
+family = "Fira Code"
+# style = "Bold" # Optional
+
+# Define the italic font face
+[font.italic]
+family = "Fira Code"
+# style = "Italic" # Optional
+
+# Define the bold-italic font face
+[font.bold_italic]
+family = "Fira Code"
+# style = "Bold Italic" # Optional
+# --- End of Corrected Font Section ---
+
+
+# Need to see how the offset really works
+#[offset]
+#x = 5
+
+
+# ... (keep any other configurations like colors, etc., below) ...
+# Colors configuration goes here
+[colors.primary]
+background = "#282828"
+foreground = "#ebdbb2"
+bright_foreground = "#fbf1c7"
+dim_foreground = "#a89984"
+
+[colors.cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+
+# this supports hexadecimal values and should be further investigated to make sure this is colored properly (needed investigation)
+[colors.vi_mode_cursor]
+text = "CellBackground"
+cursor = "CellForeground"
+
+
+[colors.selection]
+text = "CellBackground"
+background = "CellForeground"
+
+[colors.normal]
+black = "#282828"
+red = "#cc241d"
+green = "#98971a"
+yellow = "#d79921"
+blue = "#458588"
+magenta = "#b16286"
+cyan = "#689d6a"
+white = "#a89984"
+
+[colors.bright]
+black = "#928374"
+red = "#fb4934"
+green = "#b8bb26"
+yellow = "#fabd2f"
+blue = "#83a598"
+magenta = "#d3869b"
+cyan = "#8ec07c"
+white = "#ebdbb2"
+
+
+
+# These are highlight colors for search only 
+[colors.search]
+matches = { foreground = "#181818", background = "#ac4242" }
+focused_match = { foreground = "#181818", background = "#f4bf75" }
+
+# Related to the color rendering in the terminal (Not Working Investigate please)
+# Making the bold render with lighter color
+# draw_bold_text_with_bright_colors = true
+
+
+# Tip: for inspiration, look for values in the source code files of your favorite VS Code themes, and use the color picker in
+# Google to test colors before setting a value, or simply using an editor such as VS Code where colors are displayed in a
+
+
+# BELLS
+# Stuff related to bell ask about it to models or stuff like that (skipping for now , investigate )
+
+
+
+# SELECTIONS
+
+
+# Adding Blinking here
+# blinking =  "Always"
+# not working for some reason investigate
+
+
+
+# Alacritty Configuration File
+#
+# For a full list of options, consult the man page: man 5 alacritty
+# Or the online documentation/wiki.
+#
+# Location: ~/.config/alacritty/alacritty.toml
+
+# (Optional) Import other configuration files. Paths are relative to this file's directory
+# or start with ~/ for home directory or / for absolute paths.
+# Useful for separating themes or keybindings.
+# import = [
+#  "~/.config/alacritty/themes/gruvbox_dark.toml",
+#  "~/.config/alacritty/keybindings_extra.toml"
+# 
+
+
+
+# Spread additional padding evenly (if the window size doesn't match cell grid perfectly)
+#dynamic_padding = false
+
+
+# HINTs 
+[colors.hints]
+start = { foreground = '#282828', background = '#fabd2f' }
+end = { foreground = '#fabd2f', background = '#282828' } # Adjusted for visibility
+
+
+# Use bright colors for bold text
+#draw_bold_text_with_bright_colors = true
+
+
+
+[selection]
+# Characters used as separators for semantic selection (Ctrl+Shift+Click)
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+# Copy selected text to the system clipboard automatically
+save_to_clipboard = false # Set to true if you want copy-on-select
+
+# Cursor configuration
+[cursor]
+# Cursor style: shape ("Block", "Underline", "Beam"), blinking ("Never", "Off", "On", "Always")
+style = { shape = "Block", blinking = "Off" }
+
+# Cursor thickness (fraction of cell width, 0.0 to 1.0)
+
+# Mouse configuration
+[mouse]
+# Hide cursor while typing
+hide_when_typing = false
+
+# Mouse bindings (examples)
+# Use `alacritty msg` or check logs for mouse button numbers if needed (Back=8, Forward=9 typically)
+bindings = [
+  # Paste from clipboard on Ctrl + Right-click
+  { mouse = "Right", mods = "Control", action = "Paste" },
+  # Paste from primary selection buffer on Middle-click (Linux/BSD)
+  { mouse = "Middle", action = "PasteSelection" }
+]
+
+
+# Debug options (usually leave these at defaults unless troubleshooting)
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn" # Levels: Off, Error, Warn, Info, Debug, Trace
+print_events = false
+highlight_damage = false
