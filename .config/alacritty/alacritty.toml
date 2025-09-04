@@ -26,8 +26,9 @@ size = 9.5
 # this and the other specific family lines, but being explicit is fine.
 #family = "Jetbrains Mono NL"
 #family = "Fira Code"
-family = "Geist Mono"
- style = "SemiBold"
+#family = "Geist Mono"
+family = "Liberation Mono"
+ style = "Bold"
 
 
 # Define the bold font face
