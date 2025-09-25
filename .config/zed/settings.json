@@ -7,21 +7,29 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash-lite-preview"
+    }
+  },
   "vim_mode": true,
-  "ui_font_size": 12,
-  "buffer_font_size": 13,
+  "ui_font_size": 11,
+  "ui_font_weight": 600,
+  "buffer_font_size": 12,
   "buffer_font_family": ".ZedMono",
-  "buffer_font_weight": 500,
+  "buffer_font_weight": 600,
   "ui_font_family": ".ZedMono",
   "terminal": {
     "font_family": ".ZedMono",
     "font_size": 11,
     "font_weight": 500
   },
-
+// This size is only applicable for the agent window
+  "agent_font_size": 12,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Dark Hard",
+    "light": "Gruvbox Light Hard",
     "dark": "One Dark"
   },
   "autosave": {
