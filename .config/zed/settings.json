@@ -29,7 +29,7 @@
   "agent_font_size": 12,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Dark Hard",
+    "light": "Gruvbox Light Hard",
     "dark": "One Dark"
   },
   "autosave": {
