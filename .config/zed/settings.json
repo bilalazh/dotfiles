@@ -8,12 +8,13 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
+    "default_profile": "write",
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-flash"
     }
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "ui_font_size": 11,
   "ui_font_weight": 600,
   "buffer_font_size": 12,
@@ -29,7 +30,7 @@
   "agent_font_size": 12,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Hard",
+    "light": "Gruvbox Dark Hard",
     "dark": "One Dark"
   },
   "autosave": {
