@@ -11,10 +11,10 @@
     "default_profile": "write",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-pro"
+      "model": "gemini-2.5-flash"
     }
   },
-  "vim_mode": false,
+  "vim_mode": true,
   "ui_font_size": 11,
   "ui_font_weight": 600,
   "buffer_font_size": 12,
