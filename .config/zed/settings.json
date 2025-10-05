@@ -11,7 +11,7 @@
     "default_profile": "write",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash"
+      "model": "gemini-2.5-pro"
     }
   },
   "vim_mode": true,
@@ -19,18 +19,18 @@
   "ui_font_weight": 600,
   "buffer_font_size": 12,
   "buffer_font_family": ".ZedMono",
-  "buffer_font_weight": 600,
+  "buffer_font_weight": 500,
   "ui_font_family": ".ZedMono",
   "terminal": {
     "font_family": ".ZedMono",
     "font_size": 11,
     "font_weight": 500
   },
-// This size is only applicable for the agent window
+  // This size is only applicable for the agent window
   "agent_font_size": 12,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Dark Hard",
+    "light": "Ayu Light",
     "dark": "One Dark"
   },
   "autosave": {
