@@ -44,12 +44,11 @@ tooltip label {
 }
 
 #clock {
-    background-color: #64727d;
+    background-color: transparent;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: black;
+    color: white;
 }
 
 #battery.charging {
