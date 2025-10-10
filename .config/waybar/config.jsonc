@@ -1,7 +1,7 @@
 {
   "layer": "top",
-  "modules-left": ["hyprland/workspaces", "sway/mode"],
-  "modules-center": ["sway/window", "clock"],
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
   "modules-right": ["battery", "pulseaudio", "network"],
   "style": "/home/bi/dotfiles/.config/waybar/style.css",
   "sway/window": {
