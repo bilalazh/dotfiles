@@ -1,9 +1,18 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-family:
+        Jetbrains Mono Nerd Font,
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 11px;
+
+    /*These are zero otherwise they occupy too much space we can tweak them per style*/
     min-height: 0;
+    margin: 0;
+    padding: 0;
 }
 
 window#waybar {
