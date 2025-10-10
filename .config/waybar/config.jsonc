@@ -4,9 +4,7 @@
   "modules-center": ["clock"],
   "modules-right": ["battery", "pulseaudio", "network"],
   "style": "/home/bi/dotfiles/.config/waybar/style.css",
-  "sway/window": {
-    "max-length": 50,
-  },
+
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""],
