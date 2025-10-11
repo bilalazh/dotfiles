@@ -38,5 +38,6 @@
     "after_delay": {
       "milliseconds": 1500
     }
-  }
+  }, 
+    "auto_update": false
 }
