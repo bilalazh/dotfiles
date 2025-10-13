@@ -19,7 +19,7 @@ window#waybar {
     background: transparent;
     /* Removing border bottom for now   */
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    color: white;
+    color: white; 
 }
 
 tooltip {
