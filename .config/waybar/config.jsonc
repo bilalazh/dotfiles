@@ -34,7 +34,7 @@
   },
   "network": {
     "interface": "wlo1",
-    "format": "{ifname}",
+    // "format": "{ifname}",
     "format-wifi": "{essid} ({signalStrength}%) ",
     "format-ethernet": "{ipaddr}/{cidr} 󰊗",
     "format-disconnected": "", //An empty format will hide the module.
