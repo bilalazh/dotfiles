@@ -36,33 +36,48 @@ tooltip label {
     color: white;
 }
 
-/* Workspaces   */
-#workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
+/* WORKSPACES    */
+
+#workspaces {
+    border-radius: 16px 24px 24px 16px;
+    margin: 2px 0;
+    background-color: rgba(255, 255, 255, 0.08);
 }
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: rgba(74, 74, 74, 0.6);
+    border-radius: 20px;
+    color: white;
+    min-width: 2px;
+    margin: 2px 0;
+}
+
+#workspaces button:not(:last-child) {
+    margin-right: 2px;
+}
+
 
 /* Workspaces hover style */
 #workspaces button:hover {
     background-color: #64727d;
-    border: 1px solid rgba(100, 114, 125, 0.5);
-    border-radius: 50px;
+    border: 1px solid black; 
+    border-radius: 20px;
     transition: all 200ms cubic-bezier(0.000, 0.932, 0.681, 0.771) 0.2s;
 }
 
 /* focused workspace style */
 #workspaces button.focused {
     background: #64727d;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 /* active workspace style */
 #workspaces button.active {
     background: #64727d;
-    border-radius: 50px;
+    border-radius: 20px;
+    transition: padding  cubic-bezier(0.000, 0.932, 0.681, 0.771) 0.2s;
     padding: 0 12px;
-    transition: all 200ms cubic-bezier(0.000, 0.932, 0.681, 0.771) 0.2s;
 }
 
 
@@ -73,9 +88,9 @@ tooltip label {
 #workspaces,
 #pulseaudio,
 #network{
-    padding: 0 12px;
+    padding: 0px 2px;
+    
     /* Added margin to make it look better  */
-    margin: 0px 6px ;
 }
 
 #mode {
