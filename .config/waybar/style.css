@@ -76,9 +76,39 @@ tooltip label {
 #workspaces button.active {
     background: #64727d;
     border-radius: 20px;
-    transition: padding  cubic-bezier(0.000, 0.932, 0.681, 0.771) 0.2s;
+    transition: padding  cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.4s;
     padding: 0 12px;
 }
+
+
+/* MPRIS */
+/* Player conttrols on pause and play */
+#mpris{
+    background-color: #1e1e2e;
+    color: #a6adc8;
+    border-radius: 20px;
+    padding: 0 14px;
+    margin: 5px 5px;
+    border: 1px solid #313244;
+    font-family: "JetBrainsMono Nerd Font", sans-serif; 
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* When Audio is playing */
+#mpris.playing {
+    background-color: #a6e3a1; 
+    color: #1e1e2e; 
+    border: 1px solid #a6e3a1;
+    box-shadow: 0 0 10px rgba(166, 227, 161, 0.4); 
+}
+
+#mpris.paused {
+    background-color: #313244;
+    color: #7f849c;
+    font-style: italic;
+}
+
 
 
 /* global padding rules of all the modules and values  */
