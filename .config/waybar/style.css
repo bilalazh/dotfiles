@@ -14,12 +14,13 @@
     margin: 0;
     padding: 0;
 }
+
 /*Main waybar background and stuff */
 window#waybar {
     background: transparent;
     /* Removing border bottom for now   */
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    color: white; 
+    color: white;
     transition: cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
 }
 
@@ -32,6 +33,7 @@ tooltip {
     background: rgba(43, 48, 59, 0.5);
     border: 1px solid rgba(100, 114, 125, 0.5);
 }
+
 tooltip label {
     color: white;
 }
@@ -62,7 +64,7 @@ tooltip label {
 /* Workspaces hover style */
 #workspaces button:hover {
     background-color: #64727d;
-    border: 1px solid black; 
+    border: 1px solid black;
     border-radius: 20px;
     transition: all 200ms cubic-bezier(0.000, 0.932, 0.681, 0.771) 0.2s;
 }
@@ -75,34 +77,34 @@ tooltip label {
 
 /* active workspace style */
 #workspaces button.active {
-    color: white ; 
+    color: white;
     background: #64727d;
     border-radius: 20px;
-    transition: padding  cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.4s, color 0.2s ease;
+    transition: padding cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.4s, color 0.2s ease;
     padding: 0 12px;
 }
 
 
 /* MPRIS */
 /* Player conttrols on pause and play */
-#mpris{
+#mpris {
     background-color: #1e1e2e;
     color: #a6adc8;
     border-radius: 20px;
     padding: 0 14px;
     margin: 5px 5px;
     border: 1px solid #313244;
-    font-family: "JetBrainsMono Nerd Font", sans-serif; 
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
 }
 
 /* When Audio is playing */
 #mpris.playing {
-    background-color: #a6e3a1; 
-    color: #1e1e2e; 
+    background-color: #a6e3a1;
+    color: #1e1e2e;
     border: 1px solid #a6e3a1;
-    box-shadow: 0 0 10px rgba(166, 227, 161, 0.4); 
+    box-shadow: 0 0 10px rgba(166, 227, 161, 0.4);
 }
 
 #mpris.paused {
@@ -119,9 +121,9 @@ tooltip label {
 #battery,
 #workspaces,
 #pulseaudio,
-#network{
+#network {
     padding: 0px 2px;
-    
+
     /* Added margin to make it look better  */
 }
 
