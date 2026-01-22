@@ -31,7 +31,7 @@
   "agent_ui_font_size": 11,
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Light Hard",
+    "light": "Ayu Dark",
     "dark": "One Dark"
   },
   "autosave": {
