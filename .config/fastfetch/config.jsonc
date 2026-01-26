@@ -3,55 +3,66 @@
 
 {
   "$schema": "./json_schema.json",
-  "logo": {
+"logo": {
     "type": "file-raw",
     "source": "/home/bi/dotfiles/.config/fastfetch/file.txt",
-    "width": 16,
-    "height": 16,
-    "preserveAspectRatio": true,
+    "width": 25,
+    "height": 15,
+    "preserveAspectRatio": true
   },
   "display": {
-    "separator": " ",
+    "separator": ": ",
     "color": {
-      "keys": "default",
-    },
+      "keys": "white",
+      "output": "white"
+    }
   },
   "modules": [
     {
       "type": "title",
-      "key": "╭─ ",
-      "format": "{1}@{2}",
-      //"keyColor": "blue"
+      "key": "",
+      "format": "{1}@{2}"
     },
     {
       "type": "os",
-      "key": "├─ ", // Just get your distro's logo off nerdfonts.com
-      //"keyColor": "blue"
+      "key": "OS"
     },
     {
       "type": "kernel",
-      "key": "├─ ",
-      "format": "{1} {2}",
-      //"keyColor": "blue"
+      "key": "Kernel",
+      "format": "{1}"
     },
     {
       "type": "wm",
-      "key": "├─ ",
-      //"keyColor": "yellow"
+      "key": "WM"
     },
     {
       "type": "shell",
-      "key": "├─ ",
-      //"keyColor": "yellow"
+      "key": "Shell"
     },
     {
       "type": "terminal",
-      "key": "╰─ ",
-      //"keyColor": "yellow"
+      "key": "Terminal"
     },
     {
       "type": "cpu",
-      "key": "",
+      "key": "CPU",
+      "format": "{1} ({3} cores)"
     },
-  ],
+    {
+      "type": "disk",
+      "key": "Storage",
+      "folder": "/",
+      "format": "{1} / {2} ({3})"
+    },
+    {
+      "type": "memory",
+      "key": "Memory",
+      "format": "{1} / {2} ({3})"
+    },
+    {
+      "type": "uptime",
+      "key": "Uptime"
+    }
+  ]
 }
