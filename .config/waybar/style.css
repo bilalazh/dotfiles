@@ -3,6 +3,7 @@
     border-radius: 0;
     font-family: "GeistMono Nerd Font Propo", "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 11px;
+    font-weight: 700;
     min-height: 0;
     margin: 0;
     padding: 0;
@@ -101,8 +102,7 @@ tooltip label {
 #clock,
 #battery,
 #workspaces,
-#pulseaudio,
-#network {
+#pulseaudio {
     padding: 0px 2px;
 }
 
@@ -140,4 +140,31 @@ tooltip label {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+
+#network {
+    background-color: #1d2021;
+    color: #79740e;
+    border-radius: 10px;
+    padding: 0 10px;
+    margin: 2px 2px;
+    font-family: "GeistMono Nerd Font Propo", sans-serif;
+}
+
+#network.disconnected {
+    background-color: #fb4934;
+    color: #282828;
+}
+
+#network.ethernet {
+    color: #b8bb26;
+}
+
+#network.wifi {
+    color: #b8bb26;
+}
+
+#network:hover {
+    background-color: #3c3836;
+    color: #fabd2f;
 }
