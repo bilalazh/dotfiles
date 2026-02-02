@@ -17,19 +17,17 @@
     "network",
     "custom/notification"
   ],
-  "style": "/home/bi/dotfiles/.config/waybar/style.css",
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": [
       "",
       "",
       "",
-      "",
-      ""
-    ],
+      ""
+    ]
   },
   "clock": {
-    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "format-alt": "{:%a, %d. %b  %H:%M}"
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
@@ -48,16 +46,16 @@
       "default": [
         "",
         ""
-      ],
+      ]
     },
     //default scroll step is 1
     //scroll step is the amount of volume changed when scrolling
     // changed it for trackpad fine grained control
-    "scroll-step": 0.3,
+    "scroll-step": 0.1,
     "on-click": "pavucontrol",
     "ignored-sinks": [
       "Easy Effects Sink"
-    ],
+    ]
   },
   //Custom mpris module 
   // This is a custom module that i added to show the current playing song in the waybar
@@ -78,11 +76,10 @@
     "max-length": 25,
     "on-click": "playerctl play-pause",
     "on-click-right": "playerctl next",
-    "on-click-left": "playerctl previous" // Usually left is click, so you might want middle or double for prev
+    "on-click-middle": "playerctl previous"
     // "on-scroll-up": "playerctl next",
     // "on-scroll-down": "playerctl previous"
   },
-
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
@@ -113,12 +110,10 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
-    "max-length": 50,
+    "max-length": 50
   },
   "hyprland/workspaces": {
     "format": "{name}",
-    "persistent-workspaces": {
-      "*": 10
-    }
-  },
+    "persistent-workspaces": {}
+  }
 }

@@ -1,44 +1,35 @@
 * {
     border: none;
     border-radius: 0;
-    font-family:
-        Jetbrains Mono Nerd Font Propo,
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+    font-family: "GeistMono Nerd Font Propo", "Roboto", "Helvetica", "Arial", sans-serif;
     font-size: 11px;
-
-    /*These are zero otherwise they occupy too much space we can tweak them per style*/
     min-height: 0;
     margin: 0;
     padding: 0;
 }
 
-/*Main waybar background and stuff */
+/* Waybar Main Window  */
 window#waybar {
     background: transparent;
-    /* Removing border bottom for now   */
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    color: white;
-    transition: cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    color: #ffd29c;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Added so that the transition fades in and looks much better */
 window#waybar.hidden {
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
+/* When you hover over any module there is a tooltip  that pops up and shows the info related to that module */
 tooltip {
-    background: rgba(43, 48, 59, 0.5);
-    border: 1px solid rgba(100, 114, 125, 0.5);
+    background: #282828;
+    color: #ffd29c;
+    border: 1px solid #ffd29c;
+    border-radius: 10px;
 }
 
 tooltip label {
-    color: white;
+    color: #ffd29c;
 }
-
-/* WORKSPACES    */
 
 #workspaces {
     border-radius: 16px 24px 24px 16px;
@@ -60,33 +51,25 @@ tooltip label {
     margin-right: 2px;
 }
 
-
-/* Workspaces hover style */
 #workspaces button:hover {
     background-color: #64727d;
-    border: 1px solid black;
     border-radius: 20px;
-    transition: all 200ms cubic-bezier(0.000, 0.932, 0.681, 0.771) 0.2s;
+    transition: all 0.2s ease;
 }
 
-/* focused workspace style */
 #workspaces button.focused {
     background: #64727d;
     border-radius: 20px;
 }
 
-/* active workspace style */
 #workspaces button.active {
     color: white;
-    background: #64727d;
+    background: #458588;
     border-radius: 20px;
-    transition: padding cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.4s, color 0.2s ease;
+    transition: all 0.4s ease;
     padding: 0 12px;
 }
 
-
-/* MPRIS */
-/* Player conttrols on pause and play */
 #mpris {
     background-color: #1e1e2e;
     color: #a6adc8;
@@ -94,17 +77,18 @@ tooltip label {
     padding: 0 14px;
     margin: 5px 5px;
     border: 1px solid #313244;
-    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-family: "GeistMono Nerd Font Propo", sans-serif;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
 }
 
-/* When Audio is playing */
 #mpris.playing {
-    background-color: #a6e3a1;
-    color: #1e1e2e;
-    border: 1px solid #a6e3a1;
-    box-shadow: 0 0 10px rgba(166, 227, 161, 0.4);
+    background-color: #1d2021;
+    color: #a6e3a1;
+    border: 1px solid #1d2021;
+    font-family: "GeistMono Nerd Font Propo", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
 }
 
 #mpris.paused {
@@ -113,9 +97,6 @@ tooltip label {
     font-style: italic;
 }
 
-
-
-/* global padding rules of all the modules and values  */
 #mode,
 #clock,
 #battery,
@@ -123,8 +104,6 @@ tooltip label {
 #pulseaudio,
 #network {
     padding: 0px 2px;
-
-    /* Added margin to make it look better  */
 }
 
 #mode {
@@ -132,7 +111,7 @@ tooltip label {
 }
 
 #clock {
-    background-color: black;
+    background-color: #1d2021;
     border-radius: 45px;
     margin-top: 2px;
 }
