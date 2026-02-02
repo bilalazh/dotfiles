@@ -61,48 +61,52 @@ tooltip label {
 #workspaces button.active {
     color: white;
     background: #79740e;
-border-radius: 20px;
+    border-radius: 20px;
     transition: all 0.3s ease;
     padding: 0 12px;
-    margin: 5px 5px;
+    margin: 1px 2px;
 }
 
 
 
 
-
+/* This Module captures the current playing song in the waybar from various media sources that are there */
 #mpris {
-    background-color: #1e1e2e;
-    color: #a6adc8;
+    background-color: #1d2021;
+    color: #ebdbb2;
     border-radius: 20px;
-    padding: 0 14px;
-    margin: 5px 5px;
-    border: 1px solid #313244;
+    padding: 0 5px;
+    margin: 1px 2px;
+    border: 1px solid #282828;
     font-family: "GeistMono Nerd Font Propo", monospace;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
+/* Styles when the media is playing */
 #mpris.playing {
     background-color: #1d2021;
-    color: #a6e3a1;
-    border: 1px solid #1d2021;
+    color: #ebdbb2;
+    border: 1px solid #282828;
     font-family: "GeistMono Nerd Font Propo", monospace;
     font-size: 10px;
     font-weight: 700;
 }
 
+/* Styles when the media is paused */
 #mpris.paused {
-    background-color: #313244;
-    color: #7f849c;
-    font-style: italic;
+    background-color: #1d2021;
+    color: #928374;
+    border: 1px solid #282828;
+    font-family: "GeistMono Nerd Font Propo", monospace;
+    font-size: 10px;
+    font-weight: 700;
 }
 
 #mode,
 #clock,
 #battery,
-#workspaces,
-#pulseaudio {
+#workspaces {
     padding: 0px 2px;
 }
 
@@ -144,12 +148,43 @@ border-radius: 20px;
     color: #83a598;
 }
 
+#pulseaudio {
+    background-color: #1d2021;
+    color: #8ec07c;
+    border-radius: 10px;
+    padding: 0 8px;
+    margin: 1px 2px;
+}
+
+
+
+
+
+#pulseaudio.muted {
+    background-color: #fb4934;
+    color: #282828;
+}
+
+#custom-notification {
+    background-color: #1d2021;
+    color: #d3869b;
+    border-radius: 10px;
+    padding: 0 8px;
+    margin: 1px 2px;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-notification {
+    color: #fb4934;
+}
+
+
 #battery.critical:not(.charging) {
     color: #cc241d;
     border: 1px solid #fbf1c7;
     background-color: #1d2021;
     animation: blink 1s linear infinite;
-    padding: 6px 16px;
+    padding: 0 8px;
 }
 
 @keyframes blink {
