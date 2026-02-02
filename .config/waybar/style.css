@@ -86,7 +86,7 @@ tooltip label {
 /* Styles when the media is playing */
 #mpris.playing {
     background-color: #1d2021;
-    color: #ebdbb2;
+    color: #8ec07c;
     border: 1px solid #282828;
     font-family: "GeistMono Nerd Font Propo", monospace;
     font-size: 10px;
