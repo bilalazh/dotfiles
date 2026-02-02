@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: "GeistMono Nerd Font Propo", "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 700;
     min-height: 0;
     margin: 0;
@@ -33,43 +33,43 @@ tooltip label {
 }
 
 #workspaces {
-    border-radius: 16px 24px 24px 16px;
-    margin: 2px 0;
-    background-color: rgba(255, 255, 255, 0.08);
+    /* border-radius: 3px; */
+    /* margin: 0px 2px; */
+    background-color: transparent;
 }
 
 #workspaces button {
-    padding: 0 8px;
-    background-color: rgba(74, 74, 74, 0.6);
-    border-radius: 20px;
+    padding: 0 15px;
+    background-color: transparent;
+    border-radius: 4px;
     color: transparent;
-    min-width: 2px;
-    margin: 2px 0;
+    min-width: 24px;
+    /* margin: 0px 1px; */
     border: none;
 }
 
 #workspaces button:not(:last-child) {
-    margin-right: 2px;
+    /* margin-right: 2px; */
 }
 
 #workspaces button:hover {
-    background-color: #64727d;
+    background-color: #79740e;
     border-radius: 20px;
     transition: all 0.2s ease;
 }
 
-#workspaces button.focused {
-    background: #64727d;
-    border-radius: 20px;
-}
-
 #workspaces button.active {
     color: white;
-    background: #458588;
-    border-radius: 20px;
-    transition: all 0.4s ease;
+    background: #79740e;
+border-radius: 20px;
+    transition: all 0.3s ease;
     padding: 0 12px;
+    margin: 5px 5px;
 }
+
+
+
+
 
 #mpris {
     background-color: #1e1e2e;
@@ -78,7 +78,7 @@ tooltip label {
     padding: 0 14px;
     margin: 5px 5px;
     border: 1px solid #313244;
-    font-family: "GeistMono Nerd Font Propo", sans-serif;
+    font-family: "GeistMono Nerd Font Propo", monospace;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -87,9 +87,9 @@ tooltip label {
     background-color: #1d2021;
     color: #a6e3a1;
     border: 1px solid #1d2021;
-    font-family: "GeistMono Nerd Font Propo", sans-serif;
+    font-family: "GeistMono Nerd Font Propo", monospace;
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #mpris.paused {
@@ -112,42 +112,59 @@ tooltip label {
 
 #clock {
     background-color: #1d2021;
-    border-radius: 45px;
-    margin-top: 2px;
+    border-radius: 10px;
+    margin: 1px 2px;
+    padding: 0 8px;
 }
 
 #battery {
-    color: white;
+    background-color: #1d2021;
+    color: #ebdbb2;
+    border-radius: 10px;
+    padding: 0 8px;
+    margin: 1px 2px;
 }
 
-#battery.charging {
-    color: white;
-    background-color: #26a65b;
+#battery.charging,
+#battery.plugged,
+#battery.full {
+    color: #b8bb26;
+    background-color: #1d2021;
+}
+
+#battery.good {
+    color: #fe8019;
+}
+
+#battery.medium {
+    color: #fabd2f;
+}
+
+#battery.low {
+    color: #83a598;
+}
+
+#battery.critical:not(.charging) {
+    color: #cc241d;
+    border: 1px solid #fbf1c7;
+    background-color: #1d2021;
+    animation: blink 1s linear infinite;
+    padding: 6px 16px;
 }
 
 @keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
+    50% {
+        background-color: #cc241d;
+        color: #fbf1c7;
     }
-}
-
-#battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
 }
 
 #network {
     background-color: #1d2021;
     color: #79740e;
     border-radius: 10px;
-    padding: 0 10px;
-    margin: 2px 2px;
+    padding: 0 8px;
+    margin: 1px 2px;
     font-family: "GeistMono Nerd Font Propo", sans-serif;
 }
 

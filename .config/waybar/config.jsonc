@@ -1,9 +1,10 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-bottom": 1,
+  "margin-bottom": 0,
+  "margin-top": 0,
+  "spacing": 2,
   "height": 20,
-  "spacing": 4,
   "modules-left": [
     "hyprland/workspaces"
   ],
@@ -18,12 +19,30 @@
     "custom/notification"
   ],
   "battery": {
-    "format": "{capacity}% {icon}",
+    "states": {
+      "full": 100,
+      "good": 85,
+      "medium": 50,
+      "low": 35,
+      "critical": 15
+    },
+    "tooltip": true,
+    "tooltip-format-charging": "Charging  {capacity}%",
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-full": "󰁹 {capacity}%",
     "format-icons": [
-      "",
-      "",
-      "",
-      ""
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
     ]
   },
   "clock": {
@@ -122,6 +141,6 @@
   },
   "hyprland/workspaces": {
     "format": "{name}",
-    "persistent-workspaces": {}
+    "active-only": true
   }
 }
