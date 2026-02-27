@@ -26,10 +26,12 @@ tooltip {
     color: #ffd29c;
     border: 1px solid #ffd29c;
     border-radius: 10px;
+    padding: 10px;
 }
 
 tooltip label {
     color: #ffd29c;
+    padding: 5px;
 }
 
 #workspaces {
@@ -37,6 +39,7 @@ tooltip label {
     /* margin: 0px 2px; */
     background-color: transparent;
 }
+
 
 #workspaces button {
     padding: 0 15px;
@@ -48,9 +51,9 @@ tooltip label {
     border: none;
 }
 
-#workspaces button:not(:last-child) {
-    /* margin-right: 2px; */
-}
+/* #workspaces button:not(:last-child) {
+    margin-right: 2px;
+} */
 
 #workspaces button:hover {
     background-color: #79740e;

@@ -46,7 +46,11 @@
     ]
   },
   "clock": {
-    "format-alt": "{:%a, %d. %b  %H:%M}"
+    "interval": 60,
+    "format": " {:%H:%M}",
+    "format-alt": " {:%A, %B %d, %Y}",
+    "tooltip-format": "<tt>{:%I:%M %p}\n{:%A, %B %d, %Y}</tt>",
+    "tooltip": true
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -132,7 +136,7 @@
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "nm-connection-editor"
+    "on-click": "kitty --class nmtui-float -e nmtui"
   },
   "hyprland/workspaces": {
     "format": "{name}",
