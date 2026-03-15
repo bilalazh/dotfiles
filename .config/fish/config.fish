@@ -9,13 +9,21 @@ alias obsidian 'obsidian &'
 
 # this uses cliphist to get the results that were pasted without using third party app
 # todo: can also try to oepn it in a dedicated floating always on top terminal like i do with nmtui
-function s-clip
+function clf
     cliphist list | fzf -d '\t' --with-nth 2 | cliphist decode | wl-copy
 end
 
 
 # Hide the fish greeting
  set -g fish_greeting
+
+
+ function cw
+     cliphist wipe
+     # Optional:
+      notify-send "Clipboard Cleared"
+      # uncomment if you want a desktop notification
+ end
 
 
 	# Commands to run in interactive sessions can go here
