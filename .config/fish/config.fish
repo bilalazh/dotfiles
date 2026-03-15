@@ -5,6 +5,7 @@ alias vivaldi 'vivaldi --ozone-platform=x11'
 alias vivaldi-browser 'vivaldi --ozone-platform=x11'
 alias zen '/home/bi/.local/bin/zen'
 alias obsidian 'obsidian &'
+alias wall 'pkill swaybg; swaybg -i (find ~/Pictures/Wallpapers/ -type f | shuf -n 1) -m fill &'
 
 
 
