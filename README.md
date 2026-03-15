@@ -16,7 +16,11 @@
 - kanata (keybinds for main keyboard ) 
     - check some good references for it
 
+### Fish Shell Functions (Cliphist)
 
+- `clf` - Search cliphist with fzf and copy selected entry
+- `cll` - Show last 50 clipboard history entries (cliphist list | cut -f2- | head -n 50)
+- `cw` - Wipe cliphist and send notification
 
 TODOS:
 - login stuff 
