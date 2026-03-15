@@ -7,14 +7,15 @@ alias obsidian 'obsidian &'
 
 
 
-# this uses cliphist to get the results that were pasted without using third party app 
+# this uses cliphist to get the results that were pasted without using third party app
 # todo: can also try to oepn it in a dedicated floating always on top terminal like i do with nmtui
 function s-clip
     cliphist list | fzf -d '\t' --with-nth 2 | cliphist decode | wl-copy
 end
-funcsave s-clip
 
 
+# Hide the fish greeting
+ set -g fish_greeting
 
 
 	# Commands to run in interactive sessions can go here
@@ -26,4 +27,3 @@ if status is-login
         exec Hyprland
     end
 end
-
