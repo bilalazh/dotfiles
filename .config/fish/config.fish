@@ -32,7 +32,7 @@ function cll
 end
 
 
-function wp
+function setbg
     # 1. Set your wallpaper directory (change this to your actual path)
     set dir /home/bi/dotfiles/.config/hypr/images
 
