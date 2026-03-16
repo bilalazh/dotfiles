@@ -5,7 +5,7 @@ alias vivaldi 'vivaldi --ozone-platform=x11'
 alias vivaldi-browser 'vivaldi --ozone-platform=x11'
 alias zen '/home/bi/.local/bin/zen'
 alias obsidian 'obsidian &'
-alias wall 'pkill swaybg; swaybg -i (find /home/bi/dotfiles/.config/hypr/images/ -type f | shuf -n 1) -m fill &'
+# alias wall 'pkill swaybg; swaybg -i (find /home/bi/dotfiles/.config/hypr/images/ -type f | shuf -n 1) -m fill &' # Commented: use wp function instead
 
 
 
@@ -29,6 +29,31 @@ function cw
 
 function cll
     cliphist list | cut -f2- | head -n 50
+end
+
+
+function wp
+    # 1. Set your wallpaper directory (change this to your actual path)
+    set dir /home/bi/dotfiles/.config/hypr/images
+
+    # 2. Use fzf to pick a file
+    set img (ls $dir | fzf --preview "echo {}" --header="Select Painting")
+
+    # 3. If you actually picked something (didn't hit ESC)
+    if test -n "$img"
+        # Kill the old swaybg so it doesn't waste RAM
+        pkill swaybg
+
+        # Start swaybg in the background (&)
+        # We use 'fill' mode to make sure paintings look good
+        swaybg -i $dir/$img -m fill &
+
+        # Optional: Print a clean message
+        echo "Setting wallpaper: $img"
+
+        # Notification
+        notify-send "Wallpaper was Set"
+    end
 end
 
 
