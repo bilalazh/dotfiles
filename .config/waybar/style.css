@@ -1,225 +1,242 @@
+/*
+ * 🌊 LIQUID GLASS WAYBAR THEME
+ * Universal design - works on light and dark backgrounds
+ */
+
+/* Reset - keep critical layout constraints */
 * {
     border: none;
     border-radius: 0;
     font-family: "GeistMono Nerd Font Propo", "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 9px;
+    font-weight: 600;
     min-height: 0;
     margin: 0;
     padding: 0;
 }
 
-/* Waybar Main Window  */
+/* ════════════════════════════════════════════════════════
+   MAIN WINDOW - Liquid Glass Base
+   ════════════════════════════════════════════════════════ */
 window#waybar {
     background: transparent;
-    color: #ffd29c;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 window#waybar.hidden {
-    opacity: 0.1;
+    opacity: 0;
 }
 
-/* When you hover over any module there is a tooltip  that pops up and shows the info related to that module */
+/* ════════════════════════════════════════════════════════
+   TOOLTIPS
+   ════════════════════════════════════════════════════════ */
 tooltip {
-    background: #282828;
-    color: #ffd29c;
-    border: 1px solid #ffd29c;
-    border-radius: 10px;
+    background: rgba(20, 20, 20, 0.9);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
     padding: 10px;
 }
 
 tooltip label {
-    color: #ffd29c;
+    color: #ffffff;
     padding: 5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-#workspaces {
-    /* border-radius: 3px; */
-    /* margin: 0px 2px; */
-    background-color: transparent;
-}
+/* ════════════════════════════════════════════════════════
+   LIQUID GLASS BASE CLASS
+   Note: backdrop-filter is handled by Hyprland layerrule
+   ════════════════════════════════════════════════════════ */
 
-
-#workspaces button {
-    padding: 0 15px;
-    background-color: transparent;
-    border-radius: 4px;
-    color: transparent;
-    min-width: 24px;
-    /* margin: 0px 1px; */
-    border: none;
-}
-
-/* #workspaces button:not(:last-child) {
-    margin-right: 2px;
-} */
-
-#workspaces button:hover {
-    background-color: #79740e;
-    border-radius: 20px;
-    transition: all 0.2s ease;
-}
-
-#workspaces button.active {
-    color: white;
-    background: #79740e;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    padding: 0 12px;
-    margin: 1px 2px;
-}
-
-
-
-
-/* This Module captures the current playing song in the waybar from various media sources that are there */
-#mpris {
-    background-color: #1d2021;
-    color: #ebdbb2;
-    border-radius: 20px;
-    padding: 0 5px;
-    margin: 1px 2px;
-    border: 1px solid #282828;
-    font-family: "GeistMono Nerd Font Propo", monospace;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-/* Styles when the media is playing */
-#mpris.playing {
-    background-color: #1d2021;
-    color: #8ec07c;
-    border: 1px solid #282828;
-    font-family: "GeistMono Nerd Font Propo", monospace;
-    font-size: 10px;
-    font-weight: 700;
-}
-
-/* Styles when the media is paused */
-#mpris.paused {
-    background-color: #1d2021;
-    color: #928374;
-    border: 1px solid #282828;
-    font-family: "GeistMono Nerd Font Propo", monospace;
-    font-size: 10px;
-    font-weight: 700;
-}
-
-#mode,
+/* All modules share this glass base */
+#workspaces,
+#mpris,
 #clock,
 #battery,
-#workspaces {
-    padding: 0px 2px;
-}
-
+#pulseaudio,
+#custom-notification,
+#network,
 #mode {
-    color: white;
+    /* Glass tint - semi-transparent white */
+    /* blur is handled by Hyprland: layerrule = blur, waybar */
+    background-color: rgba(255, 255, 255, 0.15);
+
+    /* Liquid shine - inset shadows create the glass effect */
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+        /* Bottom subtle shadow */
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
+        /* Left edge shine */
+        inset 1px 0 0 0 rgba(255, 255, 255, 0.2),
+        /* Right edge shadow */
+        inset -1px 0 0 0 rgba(0, 0, 0, 0.05),
+        /* Inner glow */
+        inset 0 0 6px rgba(255, 255, 255, 0.1);
+
+    /* Universal text - white with shadow for contrast on any bg */
+    color: #ffffff;
+    text-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.6),
+        0 0 4px rgba(0, 0, 0, 0.3);
+
+    /* Smooth transitions */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Hover state - brighter glass */
+#workspaces:hover,
+#mpris:hover,
+#clock:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-notification:hover,
+#network:hover,
+#mode:hover {
+    box-shadow:
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+/* ════════════════════════════════════════════════════════
+   WORKSPACES - Clean and minimal
+   ════════════════════════════════════════════════════════ */
+#workspaces {
+    border-radius: 20px;
+    padding: 0px 2px;
+    margin: 1px 1px;
+}
+
+#workspaces button {
+    padding: 0 2px;
+    background-color: transparent;
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    min-width: 10px;
+    margin: 0 2px;
+    border: none;
+    text-shadow: none;
+    transition: all 0.25s ease;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+}
+
+
+
+
+
+/* ════════════════════════════════════════════════════════
+   MODULES - Individual styling
+   ════════════════════════════════════════════════════════ */
+
+/* MPRIS - Music player */
+#mpris {
+    border-radius: 20px;
+    padding: 0 4px;
+    margin: 2px 4px;
+    font-family: "GeistMono Nerd Font Propo", monospace;
+}
+
+#mpris.playing {
+    color: #a8f0c8;
+    font-size: 9px;
+}
+
+#mpris.paused {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 9px;
+}
+
+/* CLOCK */
 #clock {
-    background-color: #1d2021;
-    border-radius: 10px;
-    margin: 1px 2px;
-    padding: 0 8px;
+    border-radius: 12px;
+    padding: 0 6px;
+    margin: 2px 4px;
+    font-weight: 700;
 }
 
+/* BATTERY */
 #battery {
-    background-color: #1d2021;
-    color: #ebdbb2;
-    border-radius: 10px;
-    padding: 0 8px;
-    margin: 1px 2px;
+    border-radius: 12px;
+    padding: 0 6px;
+    margin: 2px 4px;
 }
 
 #battery.charging,
 #battery.plugged,
 #battery.full {
-    color: #b8bb26;
-    background-color: #1d2021;
+    color: #c8f0a8;
+    font-size: 9px;
 }
 
 #battery.good {
-    color: #fe8019;
+    color: #ffffff;
 }
 
 #battery.medium {
-    color: #fabd2f;
+    color: #f0d8a8;
 }
 
 #battery.low {
-    color: #83a598;
+    color: #f0a8a8;
 }
 
+#battery.critical:not(.charging) {
+    color: #ffffff;
+    background-color: rgba(251, 73, 52, 0.4);
+    
+}
+
+/* PULSEAUDIO */
 #pulseaudio {
-    background-color: #1d2021;
-    color: #8ec07c;
-    border-radius: 10px;
-    padding: 0 8px;
-    margin: 1px 2px;
+    border-radius: 12px;
+    padding: 0 6px;
+    margin: 2px 4px;
 }
-
-
-
-
 
 #pulseaudio.muted {
-    background-color: #fb4934;
-    color: #282828;
+    background-color: rgba(251, 73, 52, 0.25);
+    color: #ffb8b8;
 }
 
+/* NOTIFICATIONS */
 #custom-notification {
-    background-color: #1d2021;
-    color: #d3869b;
-    border-radius: 10px;
-    padding: 0 8px;
-    margin: 1px 2px;
+    border-radius: 12px;
+    padding: 0 6px;
+    margin: 2px 4px;
 }
 
 #custom-notification.dnd-none,
 #custom-notification.dnd-notification {
-    color: #fb4934;
+    background-color: rgba(251, 73, 52, 0.25);
+    color: #ffb8b8;
 }
 
-
-#battery.critical:not(.charging) {
-    color: #cc241d;
-    border: 1px solid #fbf1c7;
-    background-color: #1d2021;
-    animation: blink 1s linear infinite;
-    padding: 0 8px;
-}
-
-@keyframes blink {
-    50% {
-        background-color: #cc241d;
-        color: #fbf1c7;
-    }
-}
-
+/* NETWORK */
 #network {
-    background-color: #1d2021;
-    color: #79740e;
-    border-radius: 10px;
-    padding: 0 8px;
-    margin: 1px 2px;
-    font-family: "GeistMono Nerd Font Propo", sans-serif;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 2px 4px;
 }
 
 #network.disconnected {
-    background-color: #fb4934;
-    color: #282828;
+    background-color: rgba(251, 73, 52, 0.25);
+    color: #ffb8b8;
 }
 
-#network.ethernet {
-    color: #b8bb26;
-}
-
+#network.ethernet,
 #network.wifi {
-    color: #b8bb26;
+    color: #c8e8f0;
+    font-size: 9px;
 }
 
-#network:hover {
-    background-color: #3c3836;
-    color: #fabd2f;
+/* MODE (resize, etc) */
+#mode {
+    border-radius: 12px;
+    padding: 0 6px;
+    margin: 2px 4px;
+    background-color: rgba(255, 200, 100, 0.25);
+    color: #fff8e0;
 }
