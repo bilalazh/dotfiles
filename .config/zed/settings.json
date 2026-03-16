@@ -8,7 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
-    "always_allow_tool_actions": true,
+    "tool_permissions": {
+      "default": "allow"
+    },
     "default_profile": "write",
     "default_model": {
       "provider": "google",
@@ -19,6 +21,7 @@
   //Opencode Cli integration using ACP
   "agent_servers": {
     "OpenCode": {
+      "type": "custom",
       "command": "opencode-cli",
       "args": ["acp"]
     }
@@ -39,11 +42,7 @@
   },
   // This size is only applicable for the agent window
   "agent_ui_font_size": 11,
-  "theme": {
-    "mode": "system",
-    "light": "Gruvbox Dark Hard",
-    "dark": "One Dark"
-  },
+  "theme": "Gruvbox Light Hard",
   "autosave": {
     "after_delay": {
       "milliseconds": 1500
