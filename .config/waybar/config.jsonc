@@ -21,8 +21,8 @@
   "battery": {
     "states": {
       "full": 100,
-      "good": 85,
-      "medium": 50,
+      "good": 90,
+      "medium": 85,
       "low": 35,
       "critical": 15
     },
