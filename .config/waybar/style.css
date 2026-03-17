@@ -48,7 +48,7 @@
     font-size: 9px;
     font-weight: 600;
     min-height: 0;
-    margin: 0;
+    margin:  0px 0px;
     padding: 0;
 }
 
@@ -104,14 +104,29 @@ tooltip label {
     /* blur is handled by Hyprland: layerrule = blur, waybar */
     background-color: rgba(255, 255, 255, 0.15);
 
-    /* Liquid shine - more visible but natural */
+    /* Layered liquid glass effect - scaled for small buttons (300px → 30px) */
     box-shadow:
-        /* Clearer top highlight */
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
-        /* Subtle bottom shadow */ inset 0 -1px 0 0 rgba(0, 0, 0, 0.08),
-        /* Left edge highlight */ inset 1px 0 0 0 rgba(255, 255, 255, 0.1),
-        /* Right edge shadow */ inset -1px 0 0 0 rgba(0, 0, 0, 0.03);
+        /* Outer glass edge - visible boundary */
+        inset 0 0 0 1px rgba(255, 255, 255, 0.2),
+        /* Layer 1 - Outer glow (100px → 10px) */
+        inset 0 0 10px rgba(255, 255, 255, 0.08),
+        /* Layer 2 - Second layer (75px → 7px) */
+        inset 0 0 7px rgba(255, 255, 255, 0.06),
+        /* Layer 3 - Third layer (50px → 5px) */
+        inset 0 0 5px rgba(255, 255, 255, 0.05),
+        /* Layer 4 - Fourth layer (40px → 4px) */
+        inset 0 0 4px rgba(255, 255, 255, 0.04),
+        /* Top edge highlight - glass shine */
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.4),
+        /* Bottom edge shadow - glass depth */
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.15),
+        /* Left edge highlight */
+        inset 1px 0 0 0 rgba(255, 255, 255, 0.15),
+        /* Right edge shadow */
+        inset -1px 0 0 0 rgba(0, 0, 0, 0.08);
 
+
+   
     /* Universal text - softer shadow for depth */
     color: #ffffff;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -120,7 +135,7 @@ tooltip label {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Hover state - enhanced glass effect */
+/* Hover state - enhanced layered glass effect */
 #workspaces:hover,
 #mpris:hover,
 #clock:hover,
@@ -130,10 +145,20 @@ tooltip label {
 #network:hover,
 #mode:hover {
     box-shadow:
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.25),
-        inset 0 -1px 0 0 rgba(0, 0, 0, 0.12),
-        inset 1px 0 0 0 rgba(255, 255, 255, 0.15),
-        inset -1px 0 0 0 rgba(0, 0, 0, 0.05);
+        /* Enhanced blur layers on hover - increased opacity */
+        inset 0px 0px 100px rgba(255, 255, 255, 0.06),
+        inset 4px 4px 75px rgba(255, 255, 255, 0.06),
+        inset 8px 8px 50px rgba(255, 255, 255, 0.06),
+        inset 12px 12px 40px rgba(255, 255, 255, 0.06),
+        inset 16px 16px 25px rgba(255, 255, 255, 0.06),
+        inset 20px 20px 15px rgba(255, 255, 255, 0.06),
+        inset 24px 24px 10px rgba(255, 255, 255, 0.06),
+        inset 28px 28px 5px rgba(255, 255, 255, 0.06),
+        inset 32px 32px 2.5px rgba(255, 255, 255, 0.06),
+        inset 36px 36px 1px rgba(255, 255, 255, 0.06),
+        /* Enhanced border outlines on hover */
+        inset 0 0 0 4px rgba(255, 255, 255, 0.02),
+        inset 0 0 0 8px rgba(255, 255, 255, 0.02);
 }
 
 /* Active workspace - visible glass highlight */
