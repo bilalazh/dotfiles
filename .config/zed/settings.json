@@ -21,6 +21,11 @@
   //Opencode Cli integration using ACP
   "agent_servers": {
     "OpenCode": {
+      "favorite_models": [
+        "opencode/mimo-v2-flash-free/high",
+        "opencode/mimo-v2-flash-free/low",
+        "opencode/mimo-v2-flash-free"
+      ],
       "type": "custom",
       "command": "opencode-cli",
       "args": ["acp"]
