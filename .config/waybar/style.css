@@ -307,7 +307,7 @@ if both however are used then  the padding and placement should be proper
 
 /* Battery Good is 85% the threshold where i would Usually  unplug it  */
 /* this would adjust the top bar to signal me to re */
-#battery.good {
+#battery.good.charging {
     color: #ffffff;
     padding : 12px 0px ; 
 }
