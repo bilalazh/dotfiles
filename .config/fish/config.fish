@@ -44,9 +44,8 @@ function setbg
         # Kill the old swaybg so it doesn't waste RAM
         pkill swaybg
 
-        # Start swaybg in the background (&)
-        # We use 'fill' mode to make sure paintings look good
-        swaybg -i $dir/$img -m fill &
+        # Start swaybg in the background with nohup so it survives terminal close
+        nohup swaybg -i $dir/$img -m fill >/dev/null 2>&1 &
 
         # Optional: Print a clean message
         echo "Setting wallpaper: $img"
