@@ -20,6 +20,9 @@
 
   //Opencode Cli integration using ACP
   "agent_servers": {
+    "gemini": {
+      "type": "registry"
+    },
     "OpenCode": {
       "favorite_models": [
         "opencode/mimo-v2-flash-free/high",
@@ -38,7 +41,7 @@
   "buffer_font_size": 12,
   "buffer_font_family": "GeistMono Nerd Font Propo",
   "buffer_font_weight": 500,
-  "ui_font_family": "GeistMono Nerd Font Propo",
+  "ui_font_family": "SF Pro Text",
   
   "terminal": {
     "font_family": "GeistMono Nerd Font Mono",
@@ -47,7 +50,7 @@
   },
   // This size is only applicable for the agent window
   "agent_ui_font_size": 11,
-  "theme": "Gruvbox Light Hard",
+  "theme": "Ayu Dark",
   "autosave": {
     "after_delay": {
       "milliseconds": 1500
