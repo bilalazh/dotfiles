@@ -34,7 +34,7 @@
  * GTK CSS CONSTRAINTS & OPTIMIZATIONS
  *
  * ANIMATIONS: @keyframes blink for critical battery (1s linear infinite)
- * UNITS: EM for sub-pixel precision, PX for absolute control
+ * UNITS: EM for sub-pixel precision, PX for absolute controGeistMono Nerd Font Propol
  * COMPATIBILITY: GTK CSS subset, no backdrop-filter in modules
  * PERFORMANCE: Layered box-shadows instead of multiple elements
  *
@@ -66,7 +66,7 @@
  * COLORS:
  *   - Prefer rgba() over hex for transparency
  *   - Use rgba(255,255,255,0.x) for glass effect
- *
+ GeistMono Nerd Font Propo*
  * BACKDROP:
  *   - backdrop-filter needs -webkit-backdrop-filter for full support
  *   - blur(10-20px) works best, higher values may lag
@@ -122,7 +122,7 @@ window#waybar.hidden {
 tooltip {
     /*Controls the over all transparency of the pill*/
     background-color: rgba(0, 0, 0, 0.45);
-    color: #ffd29c;
+    color: #fabd2f;
     border-radius: 12px;
     padding: 10px;
     box-shadow:
@@ -139,7 +139,7 @@ tooltip {
 }
 
 tooltip label {
-    color: #ffd29c;
+    color: #fabd2f;
     padding: 5px;
     font-size: 11px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -243,7 +243,7 @@ if both however are used then  the padding and placement should be proper
     padding: 0px 2px;
     background-color: transparent;
     border-radius: 16px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #ebdbb2;
     min-width: 9px;
     margin: 0 2px;
     border: none;
@@ -270,12 +270,12 @@ if both however are used then  the padding and placement should be proper
 }
 
 #mpris.playing {
-    color: #a8f0c8;
+    color: #98971a;
     font-size: 9px;
 }
 
 #mpris.paused {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(235, 219, 178, 0.5);
     font-size: 9px;
 }
 
@@ -295,12 +295,12 @@ if both however are used then  the padding and placement should be proper
 }
 
 #battery.charging {
-    color: #c8f0a8;
+    color: #98971a;
     font-size: 9px;
 }
 
 #battery.plugged:not(.full):not(.good):not(.medium):not(.low) {
-    color: #c8f0a8;
+    color: #98971a;
     font-size: 40px;
 }
 
@@ -317,11 +317,11 @@ if both however are used then  the padding and placement should be proper
 }
 
 #battery.medium {
-    color: #f0d8a8;
+    color: #fabd2f;
 }
 
 #battery.low {
-    color: #f0a8a8;
+    color: #fb4934;
 }
 
 /* Battery critical - pulsing red to grab attention */
@@ -350,7 +350,7 @@ if both however are used then  the padding and placement should be proper
 
 #pulseaudio.muted {
     background-color: rgba(251, 73, 52, 0.25);
-    color: #ffb8b8;
+    color: #fb4934;
 }
 
 /* NOTIFICATIONS */
@@ -363,7 +363,7 @@ if both however are used then  the padding and placement should be proper
 #custom-notification.dnd-none,
 #custom-notification.dnd-notification {
     background-color: rgba(251, 73, 52, 0.25);
-    color: #ffb8b8;
+    color: #fb4934;
 }
 
 /* NETWORK */
@@ -375,12 +375,12 @@ if both however are used then  the padding and placement should be proper
 
 #network.disconnected {
     background-color: rgba(251, 73, 52, 0.25);
-    color: #ffb8b8;
+    color: #fb4934;
 }
 
 #network.ethernet,
 #network.wifi {
-    color: #c8e8f0;
+    color: #83a598;
     font-size: 9px;
 }
 
@@ -390,5 +390,5 @@ if both however are used then  the padding and placement should be proper
     padding: 0 6px;
     margin: 2px 4px;
     background-color: rgba(255, 200, 100, 0.25);
-    color: #fff8e0;
+    color: #fabd2f;
 }
