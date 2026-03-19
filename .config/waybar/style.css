@@ -269,7 +269,7 @@ if both however are used then  the padding and placement should be proper
 
 /* MPRIS - Music player */
 #mpris {
-    border-radius: 20px;
+    border-radius: 33px;
     padding: 0 4px;
     margin: 2px 4px;
 }
@@ -322,11 +322,14 @@ if both however are used then  the padding and placement should be proper
 }
 
 #battery.medium {
-    color: #fabd2f;
+    color: #ebdbb2 ;
 }
 
 #battery.low {
-    color: #fb4934;
+
+    color : #ebdbb2 ; 
+    /* Text shadow is applied here to make the text mroe readable  */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 /* Battery critical - pulsing red to grab attention */
@@ -339,12 +342,15 @@ if both however are used then  the padding and placement should be proper
 /*Battery Notification Pulse when it gets critical to get attention*/
 @keyframes pulse {
     from {
-        background-color: rgba(251, 73, 52, 0.5);
+        background-color: rgba(251, 73, 52, 0.14);
     }
     to {
         background-color: rgba(251, 73, 52, 1);
     }
 }
+
+
+
 
 /* PULSEAUDIO */
 #pulseaudio {
@@ -354,8 +360,12 @@ if both however are used then  the padding and placement should be proper
 }
 
 #pulseaudio.muted {
-    background-color: rgba(251, 73, 52, 0.25);
+    background-color: rgba(251, 73, 52, 0.15);
     color: #fb4934;
+/* EXP : using  text shadow in hopees to save this 
+* */
+
+ text-shadow: 0 1px 1px rgba(251, 73, 52, 1) ; 
 }
 
 /* NOTIFICATIONS */
@@ -367,7 +377,7 @@ if both however are used then  the padding and placement should be proper
 
 #custom-notification.dnd-none,
 #custom-notification.dnd-notification {
-    background-color: rgba(251, 73, 52, 0.25);
+    background-color: rgba(243, 33, 9, 0.769);
     color: #fb4934;
 }
 
@@ -379,13 +389,16 @@ if both however are used then  the padding and placement should be proper
 }
 
 #network.disconnected {
-    background-color: rgba(251, 73, 52, 0.25);
+    background-color: rgba(251, 73, 52, 0.18);
     color: #fb4934;
+ 
 }
 
 #network.ethernet,
 #network.wifi {
-    color: #83a598;
+    color: #ebdbb2;
+    
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     font-size: 9px;
 }
 
