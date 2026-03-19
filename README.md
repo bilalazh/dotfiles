@@ -24,4 +24,7 @@
 
 TODOS:
 - login stuff 
-- Check if there is Sf Mono Nerd Font Available or not 
+- Check if there is Sf Mono Nerd Font Available or not
+(What is diff between the Sf Rounded  and non rounded ) 
+- Making fonts sharper system wide 
+

@@ -65,8 +65,7 @@
  *
  * COLORS:
  *   - Prefer rgba() over hex for transparency
- *   - Use rgba(255,255,255,0.x) for glass effect
- GeistMono Nerd Font Propo*
+ *   - Use rgba(255,255,255,0.x) for glass effect GeistMono Nerd Font Propo*
  * BACKDROP:
  *   - backdrop-filter needs -webkit-backdrop-filter for full support
  *   - blur(10-20px) works best, higher values may lag
@@ -91,12 +90,14 @@
  * ═══════════════════════════════════════════════════════════════
  */
 
+
+
 /* Reset - keep critical layout constraints */
 * {
     border: none;
     border-radius: 0;
     font-family:
-        "SF Pro Text", "GeistMono Nerd Font Propo", "Roboto", "Helvetica",
+        "SF Pro Rounded",  "GeistMono Nerd Font Propo", "Roboto", "Helvetica",
         "Arial", sans-serif;
     font-size: 9px;
     font-weight: 600;
@@ -119,10 +120,12 @@ window#waybar.hidden {
 /* ════════════════════════════════════════════════════════
    TOOLTIPS
    ════════════════════════════════════════════════════════ */
+
+   /* This is the liquid Glass dark implementation for the tooltips 
+   they are semi transparent with cool edge reflections and good reading contrast */
 tooltip {
     /*Controls the over all transparency of the pill*/
     background-color: rgba(0, 0, 0, 0.45);
-    color: #fabd2f;
     border-radius: 12px;
     padding: 10px;
     box-shadow:
@@ -138,12 +141,14 @@ tooltip {
         /* Right edge shadow */ inset -1px 0 0 0 rgba(0, 0, 0, 0.18);
 }
 
+/* When you hover over battery or audio this is how its shown  */
 tooltip label {
-    color: #fabd2f;
+    color: #ebdbb2 ;
     padding: 5px;
     font-size: 11px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    font-family: "SF Pro Text", "GeistMono Nerd Font Propo", sans-serif;
+    font-family: ' TestTiempos Text', "GeistMono Nerd Font Propo", sans-serif;
+    font-weight: 500;
 }
 
 /* ════════════════════════════════════════════════════════
