@@ -136,7 +136,8 @@
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50,
-    "on-click": "kitty --class nmtui-float -e nmtui"
+    "on-click": "kitty --class nmtui-float -e nmtui", 
+    "on-click-right":"bash /home/bi/dotfiles/.config/hypr/scripts/toggle-wifi.sh"
   },
   "hyprland/workspaces": {
     "format": "{name}",
