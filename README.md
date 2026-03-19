@@ -24,4 +24,4 @@
 
 TODOS:
 - login stuff 
-- hyprpaper (wallpaper engine) 
+- Check if there is Sf Mono Nerd Font Available or not 
