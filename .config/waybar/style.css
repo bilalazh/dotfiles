@@ -412,15 +412,23 @@ if both however are used then  the padding and placement should be proper
 }
 
 #custom-handy {
-    padding: 0 10px;
-    background-color: #383c4a;
-    color: #ffffff;
-    border-radius: 6px;
+    border-radius: 12px;
+    padding: 0 6px;
+    margin: 2px 4px;
+    font-size: 9px;
 }
 
 #custom-handy.recording {
-    background-color: #e06c75; /* Red */
-    color: #000000;
-    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
-    font-weight: bold;
+    color: #fb4934; /* Red - like battery low */
+    font-size: 10px;
+    animation: handy-pulse 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes handy-pulse {
+    from {
+        background-color: rgba(251, 73, 52, 0.14);
+    }
+    to {
+        background-color: rgba(251, 73, 52, 0.5);
+    }
 }
