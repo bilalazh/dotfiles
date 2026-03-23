@@ -22,7 +22,7 @@ if [ "$1" == "--status" ]; then
         echo '{"text": "󰔊 REC", "class": "recording"}'
     else
         log "Output: MIC (idle class)"
-        echo '{"text": "󰔊 MIC", "class": "idle"}'
+        echo '{"text": "󰔊", "class": "idle"}'
     fi
     exit 0
 fi
