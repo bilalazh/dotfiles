@@ -413,11 +413,15 @@ if both however are used then  the padding and placement should be proper
 
 #custom-handy {
     border-radius: 12px;
-    padding: 0 6px;
+    padding: 2px 10px;
     margin: 2px 4px;
-    font-size: 9px;
+    font-size: 11px;
     background-color: rgba(255, 255, 255, 0.15);
     color: #ebdbb2;
+}
+
+#custom-handy.idle {
+    font-size: 12px;
 }
 
 #custom-handy.recording {
