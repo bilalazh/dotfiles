@@ -16,6 +16,7 @@
     "battery",
     "pulseaudio",
     "network",
+    "custom/handy",
     "custom/notification"
   ],
   "battery": {
@@ -142,5 +143,12 @@
   "hyprland/workspaces": {
     "format": "{name}",
     "active-only": true
+  },
+  "custom/handy": {
+    "exec": "/home/bi/dotfiles/.config/waybar/handy-waybar.sh --status",
+    "return-type": "json",
+    "interval": 1,
+    "on-click": "/home/bi/dotfiles/.config/waybar/handy-waybar.sh",
+    "format": "{}"
   }
 }

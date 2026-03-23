@@ -410,3 +410,17 @@ if both however are used then  the padding and placement should be proper
     background-color: rgba(255, 200, 100, 0.25);
     color: #fabd2f;
 }
+
+#custom-handy {
+    padding: 0 10px;
+    background-color: #383c4a;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+#custom-handy.recording {
+    background-color: #e06c75; /* Red */
+    color: #000000;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
