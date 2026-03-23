@@ -412,9 +412,10 @@ if both however are used then  the padding and placement should be proper
     color: #fabd2f;
 }
 
+/*Custom Handy Speech to Text*/
 #custom-handy {
     border-radius: 12px;
-    padding: 0px 2px;
+    padding: 0px 7px;
     margin: 0px 2px;
     font-size: 11px;
     background-color: rgba(255, 255, 255, 0.15);
