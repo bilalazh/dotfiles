@@ -333,6 +333,28 @@ if both however are used then  the padding and placement should be proper
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
+/* Battery full at 100% - aqua flash animation */
+#battery.full {
+    color: #ebdbb2;
+    background-color: rgba(142, 192, 124, 0.3);
+    border: 1px solid rgba(142, 192, 124, 0.5);
+    padding: 12px 18px;
+    font-weight: bold;
+    animation: aqua-pulse 0.5s ease-in-out infinite alternate;
+}
+
+/* Aqua pulse animation for full battery */
+@keyframes aqua-pulse {
+    from {
+        background-color: rgba(142, 192, 124, 0.2);
+        box-shadow: 0 0 10px rgba(142, 192, 124, 0.3);
+    }
+    to {
+        background-color: rgba(142, 192, 124, 0.6);
+        box-shadow: 0 0 20px rgba(142, 192, 124, 0.8);
+    }
+}
+
 /* Battery critical - pulsing red to grab attention */
 #battery.critical:not(.charging) {
     color: #ffffff;
