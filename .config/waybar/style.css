@@ -333,25 +333,44 @@ if both however are used then  the padding and placement should be proper
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-/* Battery full at 100% - aqua flash animation */
+/* Battery full at 100% - aqua flash animation with liquid glass */
 #battery.full {
     color: #ebdbb2;
-    background-color: rgba(142, 192, 124, 0.3);
+    background-color: rgba(142, 192, 124, 0.25);
     border: 1px solid rgba(142, 192, 124, 0.5);
-    padding: 12px 18px;
+    padding: 2px 12px;
     font-weight: bold;
+    box-shadow:
+        inset 0 0 0 1px rgba(142, 192, 124, 0.4),
+        inset 0 0 10px rgba(142, 192, 124, 0.2),
+        inset 0 0 7px rgba(142, 192, 124, 0.15),
+        inset 0 0 5px rgba(142, 192, 124, 0.1),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.3),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
     animation: aqua-pulse 0.5s ease-in-out infinite alternate;
 }
 
-/* Aqua pulse animation for full battery */
+/* Aqua pulse animation for full battery with liquid glass */
 @keyframes aqua-pulse {
     from {
         background-color: rgba(142, 192, 124, 0.2);
-        box-shadow: 0 0 10px rgba(142, 192, 124, 0.3);
+        box-shadow:
+            inset 0 0 0 1px rgba(142, 192, 124, 0.3),
+            inset 0 0 8px rgba(142, 192, 124, 0.15),
+            inset 0 0 6px rgba(142, 192, 124, 0.1),
+            inset 0 0 4px rgba(142, 192, 124, 0.08),
+            inset 0 1px 0 0 rgba(255, 255, 255, 0.25),
+            inset 0 -1px 0 0 rgba(0, 0, 0, 0.15);
     }
     to {
-        background-color: rgba(142, 192, 124, 0.6);
-        box-shadow: 0 0 20px rgba(142, 192, 124, 0.8);
+        background-color: rgba(142, 192, 124, 0.4);
+        box-shadow:
+            inset 0 0 0 1px rgba(142, 192, 124, 0.5),
+            inset 0 0 12px rgba(142, 192, 124, 0.25),
+            inset 0 0 9px rgba(142, 192, 124, 0.2),
+            inset 0 0 6px rgba(142, 192, 124, 0.15),
+            inset 0 1px 0 0 rgba(255, 255, 255, 0.35),
+            inset 0 -1px 0 0 rgba(0, 0, 0, 0.25);
     }
 }
 
