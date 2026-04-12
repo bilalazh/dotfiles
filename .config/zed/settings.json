@@ -20,6 +20,9 @@
 
   //Opencode Cli integration using ACP
   "agent_servers": {
+    "claude-acp": {
+      "type": "registry"
+    },
     "gemini": {
       "type": "registry"
     },
@@ -50,7 +53,7 @@
   },
   // This size is only applicable for the agent window
   "agent_ui_font_size": 11,
-  "theme": "Ayu Dark",
+  "theme": "Tokyo Night Light",
   "autosave": {
     "after_delay": {
       "milliseconds": 1500
