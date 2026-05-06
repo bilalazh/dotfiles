@@ -12,9 +12,10 @@
    "$schema": "https://vicinae.com/schemas/config.json",
    "theme": {
       "dark": {
-         "name": "ayu-dark"
+         "name": "gruvbox-light"
       }
    },
+   "fallbacks": [],
    "providers": {
       "clipboard": {
          "preferences": {
