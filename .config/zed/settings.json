@@ -53,7 +53,7 @@
   },
   // This size is only applicable for the agent window
   "agent_ui_font_size": 11,
-  "theme": "Tokyo Night Light",
+  "theme": "Gruvbox Dark Hard",
   "autosave": {
     "after_delay": {
       "milliseconds": 1500
