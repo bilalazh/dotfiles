@@ -11,6 +11,6 @@ then
 
 else
 
-hyprsunset -t 3500k --gamma 30 &
+hyprsunset -t 3500k --gamma 50 &
 
 fi
