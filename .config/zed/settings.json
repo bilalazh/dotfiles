@@ -59,6 +59,8 @@
   },
   // This size is only applicable for the agent window
   "agent_ui_font_size": 11,
+  "agent_ui_font_family": "SF Pro Text",
+  "agent_buffer_font_family": "GeistMono Nerd Font Propo",
   "theme": {
     "mode": "light",
     "light": "Tokyo Night Light",
