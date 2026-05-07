@@ -62,9 +62,9 @@
   "agent_ui_font_family": "SF Pro Text",
   "agent_buffer_font_family": "GeistMono Nerd Font Propo",
   "theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Tokyo Night Light",
-    "dark": "One Dark"
+    "dark": "Ayu Dark"
   },
   "autosave": {
     "after_delay": {
