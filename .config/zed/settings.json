@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "existing_window",
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "agent": {
     "tool_permissions": {
       "default": "allow"
@@ -53,10 +59,14 @@
   },
   // This size is only applicable for the agent window
   "agent_ui_font_size": 11,
-  "theme": "Gruvbox Dark Hard",
+  "theme": {
+    "mode": "light",
+    "light": "Tokyo Night Light",
+    "dark": "One Dark"
+  },
   "autosave": {
     "after_delay": {
-      "milliseconds": 1500
+      "milliseconds": 1000
     }
   },
   "auto_update": false
