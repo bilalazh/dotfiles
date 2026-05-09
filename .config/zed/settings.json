@@ -9,7 +9,7 @@
 {
   "cli_default_open_behavior": "existing_window",
   "icon_theme": {
-    "mode": "dark",
+    "mode": "light",
     "light": "Zed (Default)",
     "dark": "Zed (Default)"
   },
@@ -62,7 +62,7 @@
   "agent_ui_font_family": "SF Pro Text",
   "agent_buffer_font_family": "GeistMono Nerd Font Propo",
   "theme": {
-    "mode": "dark",
+    "mode": "light",
     "light": "Tokyo Night Light",
     "dark": "Ayu Dark"
   },
