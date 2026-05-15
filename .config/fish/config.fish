@@ -18,7 +18,10 @@ end
 
 
 # Hide the fish greeting
- set -g fish_greeting
+set -g fish_greeting
+
+# Add user local bin to PATH
+set -gx PATH $PATH ~/.local/bin
 
 
 function cw
@@ -63,6 +66,6 @@ end
 # Start Hyprland automatically on tty1
 if status is-login
     if test (tty) = /dev/tty1
-        exec Hyprland
+        exec start-hyprland
     end
 end
