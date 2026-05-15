@@ -7,69 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "cli_default_open_behavior": "existing_window",
-  "icon_theme": {
-    "mode": "light",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)"
-  },
-  "agent": {
-    "tool_permissions": {
-      "default": "allow"
-    },
-    "default_profile": "write",
-    "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    }
-  },
-
-  //Opencode Cli integration using ACP
-  "agent_servers": {
-    "claude-acp": {
-      "type": "registry"
-    },
-    "gemini": {
-      "type": "registry"
-    },
-    "OpenCode": {
-      "favorite_models": [
-        "opencode/mimo-v2-flash-free/high",
-        "opencode/mimo-v2-flash-free/low",
-        "opencode/mimo-v2-flash-free"
-      ],
-      "type": "custom",
-      "command": "opencode-cli",
-      "args": ["acp"]
-    }
-  },
-
-  "vim_mode": true,
-  "ui_font_size": 11,
-  "ui_font_weight": 500,
-  "buffer_font_size": 12,
-  "buffer_font_family": "GeistMono Nerd Font Propo",
-  "buffer_font_weight": 500,
-  "ui_font_family": "SF Pro Text",
-  
-  "terminal": {
-    "font_family": "GeistMono Nerd Font Mono",
-    "font_size": 11,
-    "font_weight": 500
-  },
-  // This size is only applicable for the agent window
-  "agent_ui_font_size": 11,
-  "agent_ui_font_family": "SF Pro Text",
-  "agent_buffer_font_family": "GeistMono Nerd Font Propo",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
   "theme": {
-    "mode": "light",
-    "light": "Tokyo Night Light",
-    "dark": "Ayu Dark"
+    "mode": "system",
+    "light": "One Light",
+    "dark": "One Dark",
   },
-  "autosave": {
-    "after_delay": {
-      "milliseconds": 1000
-    }
-  },
-  "auto_update": false
 }
