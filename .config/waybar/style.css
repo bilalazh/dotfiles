@@ -90,14 +90,13 @@
  * ═══════════════════════════════════════════════════════════════
  */
 
-
-
 /* Reset - keep critical layout constraints */
 * {
+    all: unset ;
     border: none;
     border-radius: 0;
     font-family:
-        "SF Pro Rounded",  "GeistMono Nerd Font Propo", "Roboto", "Helvetica",
+        "SF Pro Rounded", "GeistMono Nerd Font Propo", "Roboto", "Helvetica",
         "Arial", sans-serif;
     font-size: 9px;
     font-weight: 600;
@@ -121,7 +120,7 @@ window#waybar.hidden {
    TOOLTIPS
    ════════════════════════════════════════════════════════ */
 
-   /* This is the liquid Glass dark implementation for the tooltips 
+/* This is the liquid Glass dark implementation for the tooltips
    they are semi transparent with cool edge reflections and good reading contrast */
 tooltip {
     /*Controls the over all transparency of the pill*/
@@ -143,11 +142,11 @@ tooltip {
 
 /* When you hover over battery or audio this is how its shown  */
 tooltip label {
-    color: #ebdbb2 ;
+    color: #ebdbb2;
     padding: 5px;
     font-size: 11px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-    font-family: ' TestTiempos Text', "GeistMono Nerd Font Propo", sans-serif;
+    font-family: " TestTiempos Text", "GeistMono Nerd Font Propo", sans-serif;
     font-weight: 500;
 }
 
@@ -323,12 +322,11 @@ if both however are used then  the padding and placement should be proper
 }
 
 #battery.medium {
-    color: #ebdbb2 ;
+    color: #ebdbb2;
 }
 
 #battery.low {
-
-    color : #ebdbb2 ; 
+    color: #ebdbb2;
     /* Text shadow is applied here to make the text mroe readable  */
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
@@ -391,9 +389,6 @@ if both however are used then  the padding and placement should be proper
     }
 }
 
-
-
-
 /* PULSEAUDIO */
 #pulseaudio {
     border-radius: 12px;
@@ -404,10 +399,10 @@ if both however are used then  the padding and placement should be proper
 #pulseaudio.muted {
     background-color: rgba(251, 73, 52, 0.15);
     color: #fb4934;
-/* EXP : using  text shadow in hopees to save this 
+    /* EXP : using  text shadow in hopees to save this
 * */
 
- text-shadow: 0 1px 1px rgba(251, 73, 52, 1) ; 
+    text-shadow: 0 1px 1px rgba(251, 73, 52, 1);
 }
 
 /* NOTIFICATIONS */
@@ -433,13 +428,12 @@ if both however are used then  the padding and placement should be proper
 #network.disconnected {
     background-color: rgba(251, 73, 52, 0.18);
     color: #fb4934;
- 
 }
 
 #network.ethernet,
 #network.wifi {
     color: #ebdbb2;
-    
+
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     font-size: 9px;
 }
