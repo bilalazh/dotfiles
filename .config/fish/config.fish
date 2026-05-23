@@ -69,3 +69,7 @@ if status is-login
         exec start-hyprland
     end
 end
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/bi/.local/bin" $PATH
