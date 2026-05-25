@@ -40,3 +40,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH=$PATH:/home/bi/.spicetify
 
 export YDOTOOL_SOCKET="$HOME/.ydotool_socket"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/bi/.local/bin:$PATH"
