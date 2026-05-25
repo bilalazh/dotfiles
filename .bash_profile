@@ -17,3 +17,7 @@ fi
 # User specific environment and startup programs
 
 export PATH=$PATH:/home/bi/.spicetify
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/bi/.local/bin:$PATH"
