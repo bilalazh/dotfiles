@@ -10,16 +10,67 @@
 
 {
    "$schema": "https://vicinae.com/schemas/config.json",
+   "font": {
+      "normal": {
+         "family": "SF Pro Text"
+      }
+   },
    "theme": {
       "dark": {
          "name": "gruvbox-dark"
       }
    },
+   "telemetry": {
+      "system_info": false
+   },
    "fallbacks": [],
    "providers": {
+      "@Ninetonine/store.vicinae.searxng": {
+         "preferences": {
+            "instance_domain": "https://serxng-deployment-production.up.railway.app",
+            "default_category": "general",
+            "details_start_open": false,
+            "engines": "",
+            "keep_previous_search": true,
+            "languages": ""
+         }
+      },
+      "@jag-k/store.raycast.duckduckgo-image-search": {
+         "preferences": {
+            "locale": "en-us",
+            "retries": "5",
+            "saveDirectory": "~/Downloads",
+            "sleep": "2000"
+         },
+         "entrypoints": {
+            "search-image": {
+               "preferences": {
+                  "license": "",
+                  "moderate": false
+               }
+            }
+         }
+      },
       "clipboard": {
+         "enabled": true,
          "preferences": {
             "monitoring": false
+         }
+      },
+      "power": {
+         "entrypoints": {
+            "hibernate": {
+               "enabled": false
+            },
+            "power-off": {
+               "enabled": false
+            },
+            "reboot": {
+               "enabled": false
+            },
+            "suspend": {
+               "enabled": false
+            }
          }
       }
    }
