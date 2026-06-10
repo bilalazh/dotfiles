@@ -12,6 +12,7 @@
 ## Supermaven for Neovim
 
 it is installed by packer (make sure you have packer installed)
+
     ```
     https://github.com/supermaven-inc/supermaven-nvim
     ```
@@ -29,13 +30,14 @@ it is installed by packer (make sure you have packer installed)
 can be used with `colorscheme retrobox` (already set in init.lua)
 
 #### Toggle Theme
-    ```bash
-# toggle theme dark
+
+    ```
     vim.o.background = 'dark'
     ```
 
-    ```bash
-# toggle theme light
+
+#### toggle theme light
+    ```
     vim.o.background = 'light'
     ```
 
