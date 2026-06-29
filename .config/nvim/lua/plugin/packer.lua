@@ -3,6 +3,7 @@ return require('packer').startup(function(use)
   -- Packer manages itself
   use 'wbthomason/packer.nvim'
 
+
   -- Supermaven configuration must be INSIDE this block
   use {
       "supermaven-inc/supermaven-nvim",
@@ -12,12 +13,18 @@ return require('packer').startup(function(use)
               keymaps = {
                   accept_suggestion = "<Tab>",
 
-                -- TODO : Find better keybinds for these
-                  --  clear_suggestion = "<C-t>",
-                  --    accept_word = "<C-j>",
+                  -- Not sure if these have conlficts or not 
+                    clear_suggestion = "<Esc>",
+                      accept_word = "<C-s>",
+              },
+            -- Ignore filetypes using  
+              ignore_filetypes = {
+              cpp = false,
+
               },
           })
       end,
   }
-end)
+end
+)
 
