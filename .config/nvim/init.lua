@@ -29,5 +29,5 @@ vim.opt.cursorline = true
 
 --   Activate the Retrobox colorscheme
 vim.cmd("colorscheme retrobox")
-vim.o.background="light"
+vim.o.background="dark"
 
