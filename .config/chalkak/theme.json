@@ -1,0 +1,39 @@
+{
+  "mode": "dark",
+  "colors": {
+    "common": {
+      "focus_ring_color": "#fe8019",
+      "border_color": "#504945",
+      "text_color": "#fbf1c7"
+    },
+    "dark": {
+      "panel_background": "#282828",
+      "canvas_background": "#1d2021",
+      "accent_gradient": "linear-gradient(135deg, #fe8019, #fabd2f)",
+      "accent_text_color": "#1d2021"
+    },
+    "light": {
+      "panel_background": "#fbf1c7",
+      "canvas_background": "#f2e5bc",
+      "accent_gradient": "linear-gradient(135deg, #b8bb26, #8ec07c)",
+      "accent_text_color": "#1d2021"
+    }
+  },
+  "editor": {
+    "common": {
+      "rectangle_border_radius": 6,
+      "default_tool_color": "#fb4934",
+      "default_text_size": 18,
+      "default_stroke_width": 3,
+      "tool_color_palette": ["#fb4934", "#fabd2f", "#83a598", "#b8bb26", "#d3869b", "#fe8019"],
+      "stroke_width_presets": [2, 4, 8, 12],
+      "text_size_presets": [14, 18, 24, 32]
+    },
+    "dark": {
+      "default_tool_color": "#fbf1c7"
+    },
+    "light": {
+      "default_tool_color": "#1d2021"
+    }
+  }
+}
