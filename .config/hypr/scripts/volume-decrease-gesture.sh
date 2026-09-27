@@ -6,7 +6,7 @@
 # wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+   This command is used to increase the volume by 1 percent
 
 # Frist just increase the volume by 1 percent 
-wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
 
 # Now we need to get the current volume level
 CURRENT_VOLUME_LEVEL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk  '{print $2}')
@@ -19,5 +19,5 @@ CURRENT_VOLUME_LEVEL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk  '{print $2}'
 
 PERCENTAGE=$(echo "$CURRENT_VOLUME_LEVEL *100" | bc | awk '{print int($1)}' )
 
- notify-send "Volume -1% " "<span color='#fb4934' weight='bold'>🔈 $PERCENTAGE</span>"
+ notify-send "Volume -2% " "<span color='#fb4934' weight='bold'>🔈 $PERCENTAGE</span>"
 
