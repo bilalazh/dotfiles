@@ -10,18 +10,35 @@
 
 {
    "$schema": "https://vicinae.com/schemas/config.json",
+   "close_on_focus_loss": false,
+   "escape_key_behavior": "close_window",
+   "keybinding": "vim",
    "font": {
+      "rendering": "qt",
       "normal": {
-         "family": "SF Pro Text"
+         "family": "SF Pro Text",
+         "size": 9.5
       }
    },
    "theme": {
       "dark": {
-         "name": "gruvbox-dark"
+         "name": "rose-pine",
+         "icon_theme": "Adwaita"
       }
    },
    "telemetry": {
       "system_info": false
+   },
+   "launcher_window": {
+      "rounding": 21,
+      "opacity": 1,
+      "client_side_decorations": {
+         "border_width": 0,
+         "shadow_size": 12
+      },
+      "compact_mode": {
+         "enabled": true
+      }
    },
    "fallbacks": [],
    "providers": {
@@ -33,6 +50,11 @@
             "engines": "",
             "keep_previous_search": true,
             "languages": ""
+         }
+      },
+      "@dagimg-dot/store.vicinae.wifi-commander": {
+         "preferences": {
+            "network-cli-tool": "nmcli"
          }
       },
       "@jag-k/store.raycast.duckduckgo-image-search": {
@@ -51,10 +73,67 @@
             }
          }
       },
+      "@sameoldlab/store.vicinae.fuzzy-files": {
+         "enabled": false
+      },
+      "@sovereign/store.vicinae.hypr-keybinds": {
+         "entrypoints": {
+            "hyprland-keybinds": {
+               "enabled": false
+            }
+         }
+      },
       "clipboard": {
-         "enabled": true,
+         "enabled": false,
          "preferences": {
             "monitoring": false
+         }
+      },
+      "core": {
+         "entrypoints": {
+            "sponsor": {
+               "enabled": false
+            }
+         }
+      },
+      "files": {
+         "enabled": false,
+         "preferences": {
+            "autoIndexing": false,
+            "excludedIndexingPaths": [],
+            "indexingPaths": [
+               "/home/bi"
+            ]
+         },
+         "entrypoints": {
+            "search": {
+               "alias": "sf"
+            }
+         }
+      },
+      "media": {
+         "entrypoints": {
+            "volume-0": {
+               "enabled": false
+            },
+            "volume-100": {
+               "enabled": false
+            },
+            "volume-25": {
+               "enabled": false
+            },
+            "volume-50": {
+               "enabled": false
+            },
+            "volume-75": {
+               "enabled": false
+            },
+            "volume-down": {
+               "enabled": false
+            },
+            "volume-up": {
+               "enabled": false
+            }
          }
       },
       "power": {
@@ -70,6 +149,22 @@
             },
             "suspend": {
                "enabled": false
+            }
+         }
+      },
+      "snippets": {
+         "preferences": {
+            "enabled": true,
+            "undo": true,
+            "layout": "",
+            "prePasteDelay": "0",
+            "keyDelay": "2"
+         }
+      },
+      "system": {
+         "entrypoints": {
+            "browse-apps": {
+               "enabled": true
             }
          }
       }
