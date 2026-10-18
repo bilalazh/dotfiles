@@ -4,6 +4,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
 
+
+
   -- Supermaven configuration must be INSIDE this block
   use {
       "supermaven-inc/supermaven-nvim",
@@ -25,4 +27,7 @@ return require('packer').startup(function(use)
       end,
   }
 end)
+
+
+
 

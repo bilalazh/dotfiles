@@ -1,5 +1,5 @@
 
--- Require files from other directory 
+
 require("config.remap")
 require("plugin.packer")
 
