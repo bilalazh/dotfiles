@@ -44,3 +44,4 @@ export YDOTOOL_SOCKET="$HOME/.ydotool_socket"
 
 # Added by Antigravity CLI installer
 export PATH="/home/bi/.local/bin:$PATH"
+
